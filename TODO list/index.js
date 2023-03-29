@@ -3,9 +3,10 @@ var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
     var hora = new Date(Date.now());
-    var txthora = document.createTextNode(hora.getHours() + ":" + hora.getMinutes() + ", " + hora.toDateString());
+    var txthora = document.createTextNode("Creacion: "+ hora.getHours() + ":" + hora.getMinutes() + ", " + hora.toDateString());
     var p = document.createElement("p");
     p.className = "hora";
+    p.setAttribute("id", "mostrarhora")
     p.appendChild(txthora);
     myNodelist[i].appendChild(p)
 
@@ -27,13 +28,16 @@ for (i = 0; i < close.length; i++) {
 }
 //cambia estado a checked
 var list = document.querySelector('ul');
-var horaDeTerminación = new Date(Date.now());
 list.addEventListener('click', function (ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
-        txthora = document.createTextNode(horaDeTerminación.getHours() + ":" + horaDeTerminación.getMinutes() + ", " + horaDeTerminación.toDateString());
+        var horaDeTerminación = new Date(Date.now());
+        var txthora = document.createTextNode("Terminacion: "+ horaDeTerminación.getHours() + ":" + horaDeTerminación.getMinutes() + ", " + horaDeTerminación.toDateString());
+        var p = document.createElement("p");
+        p.className = "terminacion";
+        p.setAttribute("id", "mostrarhora");
         p.appendChild(txthora);
-        ev.target.appendChild(p)
+        ev.target.appendChild(p);
     }
 }, false);
 
@@ -51,9 +55,10 @@ function newElement() {
     document.getElementById("myInput").value = "";
 
     var hora = new Date(Date.now());
-    var txthora = document.createTextNode(hora.getHours() + ":" + hora.getMinutes() + ", " + hora.toDateString());
+    var txthora = document.createTextNode("Creacion: "+ hora.getHours() + ":" + hora.getMinutes() + ", " + hora.toDateString());
     var p = document.createElement("p");
     p.className = "hora";
+    p.setAttribute("id", "mostrarhora");
     p.appendChild(txthora);
     li.appendChild(p)
 
