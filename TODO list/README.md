@@ -8,7 +8,7 @@ El objetivo de este TP es construir nuestra propia TODO List, usando lo aprendid
 
 - Cada elemento tendrá además la fecha y hora (timestamp) de cuando un elemento fue creado y cuándo fue tachado.             ❌
 
-- Agregar otro botón que muestre qué tarea fue la más rápido en realizarse. 
+- Agregar otro botón que muestre qué tarea fue la más rápido en realizarse.             ❌
 
 Entonces, se mostrara el input para agregar el elemento, y su boton para hacerlo, donde se valide que se haya ingresado correctamente. El elemento de la lista tendra la opcion de marcarlo como hecho, con un checkbox, y por ultimo, un boton que te muestre cual fue la opcion mas rapida en realizarse.
 

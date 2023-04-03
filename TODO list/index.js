@@ -1,5 +1,6 @@
 //pone los elementos ya ingresados
 var myNodelist = document.getElementsByTagName("LI");
+var ListaTerminacion = [];
 var i;
 for (i = 0; i < myNodelist.length; i++) {
     var hora = new Date(Date.now());
@@ -33,6 +34,7 @@ list.addEventListener('click', function (ev) {
         if (ev.target.tagName === 'LI') {
             ev.target.classList.toggle('checked');
             var horaDeTerminación = new Date(Date.now());
+            ListaTerminacion.push(horaDeTerminación)
             var txthora = document.createTextNode("Terminacion: "+ horaDeTerminación.getHours() + ":" + horaDeTerminación.getMinutes() + ", " + horaDeTerminación.toDateString());
             var p = document.createElement("p");
                 p.className = "terminacion";
@@ -70,6 +72,7 @@ function newElement() {
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
+    
 
     for (i = 0; i < close.length; i++) {
         close[i].onclick = function () {
@@ -77,10 +80,16 @@ function newElement() {
             div.style.display = "none";
         }
     }
-
 }
 
 //MAS RAPIDO FIIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUM
 function masRapido(){
-    var list =  
+    var horarapida = new Date(Date.now());
+    for(var i = 0; i < ListaTerminacion.length; i++){
+        if(horarapida > ListaTerminacion[i]){
+            horarapida = ListaTerminacion[i]
+        }
+        
+    }
+    alert(`El TODO que mas rapido se hizo fue: ${horarapida.getHours()} : ${horarapida.getMinutes()} , ${horarapida.toDateString()}`)
 }
