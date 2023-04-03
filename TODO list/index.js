@@ -29,15 +29,18 @@ for (i = 0; i < close.length; i++) {
 //cambia estado a checked
 var list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
-        var horaDeTerminación = new Date(Date.now());
-        var txthora = document.createTextNode("Terminacion: "+ horaDeTerminación.getHours() + ":" + horaDeTerminación.getMinutes() + ", " + horaDeTerminación.toDateString());
-        var p = document.createElement("p");
-        p.className = "terminacion";
-        p.setAttribute("id", "mostrarhora");
-        p.appendChild(txthora);
-        ev.target.appendChild(p);
+    if(ev.target.className !== "checked"){
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+            var horaDeTerminación = new Date(Date.now());
+            var txthora = document.createTextNode("Terminacion: "+ horaDeTerminación.getHours() + ":" + horaDeTerminación.getMinutes() + ", " + horaDeTerminación.toDateString());
+            var p = document.createElement("p");
+                p.className = "terminacion";
+                p.setAttribute("id", "mostrarhorafinal ");
+                p.appendChild(txthora);
+                ev.target.appendChild(p);    
+        }
+
     }
 }, false);
 
@@ -75,4 +78,9 @@ function newElement() {
         }
     }
 
+}
+
+//MAS RAPIDO FIIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUM
+function masRapido(){
+    var list =  
 }

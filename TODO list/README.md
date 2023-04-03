@@ -4,9 +4,9 @@ El objetivo de este TP es construir nuestra propia TODO List, usando lo aprendid
 
 - Cada vez que se agregue un nuevo elemento, la lista lo deberá mostrar y, en caso que se marque como realizado deberá mostrarse tachado.             ❌
 
-- Es requisito usar un array para almacenar los TODOs y Bootstrap.                      FALTA BOOSTRAP
+- Es requisito usar un array para almacenar los TODOs y Bootstrap.             ❌                     
 
-- Cada elemento tendrá además la fecha y hora (timestamp) de cuando un elemento fue creado y cuándo fue tachado.             FALTA QUE SE BORRE LA FECHA ANTERIOR
+- Cada elemento tendrá además la fecha y hora (timestamp) de cuando un elemento fue creado y cuándo fue tachado.             ❌
 
 - Agregar otro botón que muestre qué tarea fue la más rápido en realizarse. 
 
